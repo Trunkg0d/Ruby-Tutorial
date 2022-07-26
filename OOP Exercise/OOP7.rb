@@ -20,6 +20,7 @@ class Person
 
         def setAge(age)
             @age = age.to_i
+        end
 
         def getAge
             return @age 
@@ -45,9 +46,7 @@ class Student < Person
         @gpa
     public
         def initialize(name,age, address,gpa)
-            @name = name.to_s
-            @age = age.to_i
-            @address = address.to_s
+            super(name,age,address)
             @gpa=gpa.to_f
         end
 
@@ -60,7 +59,7 @@ class Student < Person
         end
 
         def display
-            super.display
+            super.display()
             puts "GPA: #{@gpa}"
         end
 end
@@ -70,9 +69,7 @@ class Teacher < Person
         @salary
     public
         def initialize(name, age, address, salary)
-            @name = name.to_s
-            @age = age.to_i
-            @address = address.to_s
+            super(name,age,address)
             @salary = salary.to_i
         end
 
@@ -85,7 +82,7 @@ class Teacher < Person
         end
 
         def display
-            super.display
+            super.display()
             puts "Salary: #{@salary}"
         end
 end
@@ -95,4 +92,3 @@ s.display()
 t = Teacher.new("Tung", 34, "Ha Noi", 1700)
 t.display()
 
-end
