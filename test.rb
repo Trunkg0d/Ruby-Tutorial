@@ -1,5 +1,12 @@
-hsh={name:"Trung",age:19,address:"VN"}
-puts hsh[:name]
+class Parent
+    private
+        def private_method
+            puts "Private method"
+        end
+end
 
-# person = { height: '6 ft', weight: '160 lbs' }
-# puts person[height]
+class Child < Parent
+    self.private_method
+end
+
+c = Child.new
