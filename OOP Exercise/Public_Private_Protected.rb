@@ -46,4 +46,4 @@ end
 sm = SubMethodd.new()
 sm.callback_private
 sm.callback_protected
-sm.method_protected
+sm.method_private
